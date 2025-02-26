@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ftvalex01/shared-utils": "github:ftvalex01/shared-utils",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
