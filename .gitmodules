@@ -1,0 +1,3 @@
+[submodule "config"]
+	path = config
+	url = https://github.com/ftvalex01/project-config.git
