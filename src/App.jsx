@@ -6,6 +6,15 @@ import { formatDate } from "@ftvalex01/shared-utils";
 
 function App() {
   const [count, setCount] = useState(0)
+  
+  // Se espera que en el .env esté definida VITE_API_URL
+  const apiUrl = import.meta.env.VITE_API_URL;
+  
+  // Si la variable no está definida, lanzamos un error para que se note inmediatamente
+  if (!apiUrl) {
+    throw new Error("Error: VITE_API_URL no está definida. Revisa la configuración del .env.");
+  }
+  
   console.log(formatDate(new Date()));
   
   return (
@@ -19,6 +28,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <h2>API URL: {apiUrl}</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
