@@ -2,20 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { formatDate } from "@ftvalex01/shared-utils";
+import { formatedDate } from "@ftvalex01/shared-utils";
 
 function App() {
   const [count, setCount] = useState(0)
   
   // Se espera que en el .env esté definida VITE_API_URL
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = import.meta.env.VITE_NEXT_PUBLIC_API_URL;
   
   // Si la variable no está definida, lanzamos un error para que se note inmediatamente
   if (!apiUrl) {
     throw new Error("Error: VITE_API_URL no está definida. Revisa la configuración del .env.");
   }
   
-  console.log(formatDate(new Date()));
+  console.log(formatedDate(new Date()));
   
   return (
     <>
